@@ -1,0 +1,332 @@
+/*=================== Color ===================*/
+/*=================== Font and typography ===================*/
+/*=================== Margin and padding ===================*/
+/*=================== Mixins ===================*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*=================== Header ===================*/
+/*=================== Main ===================*/
+.landing {
+  min-height: 20vh;
+}
+
+.landing .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 10vh;
+}
+
+.landing .nav .nav-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing .nav .nav-title img {
+  padding-right: 0.3em;
+  height: 4rem;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+
+.landing .nav .nav-title #dynamic {
+  display: inline-block;
+}
+
+.landing .nav .nav-title #dynamic::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.landing .nav .nav-title #dynamic.active::after {
+  display: none;
+}
+
+.landing .nav .toggleBtn-menu {
+  color: #000;
+}
+
+.landing .nav .toggleBtn-menu:hover {
+  color: #5480fa;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+#jerry {
+  display: none;
+}
+
+/*=== Landing Page ===*/
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #5480fa;
+  color: #face54;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.intro .hide {
+  overflow: hidden;
+}
+
+.intro .hide span {
+  display: inline-block;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+/*=================== Section A ===================*/
+.section-a {
+  padding: 1.5rem;
+}
+
+.section-a p {
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 0.5rem 0;
+}
+
+.section-a__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: start;
+  padding: 1rem 0;
+}
+
+.section-a__icons li {
+  padding: 1rem 0.5rem;
+}
+
+.section-a__icons li a {
+  color: #000;
+  font-size: 1.3rem;
+}
+
+.section-a__icons li .fa-linkedin:hover,
+.section-a__icons li .fa-envelope:hover,
+.section-a__icons li .fa-github-square:hover {
+  color: #5480fa;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+/*=================== Skills ===================*/
+.skill {
+  padding: 1.5rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.skill__language, .skill__plus, .skill__speak {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skill__language ul, .skill__plus ul, .skill__speak ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0rem;
+  font-size: 0.7rem;
+}
+
+.skill__language ul li, .skill__plus ul li, .skill__speak ul li {
+  text-align: center;
+}
+
+.skill__language ul li img, .skill__plus ul li img, .skill__speak ul li img {
+  width: auto;
+  height: 15%;
+}
+
+.skill__text {
+  background: #face54;
+  padding: 1rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/*=================== Works ===================*/
+.work {
+  padding: 1.5rem;
+}
+
+.work__title {
+  padding-bottom: 0.5rem;
+}
+
+.work .card {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.work .card__content {
+  padding-bottom: 2rem;
+}
+
+.work .card__content a {
+  font-size: 1.3rem;
+  color: #000;
+}
+
+.work .card__content .fa-github-square:hover {
+  color: #5480fa;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.work .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 0%;
+     object-position: 0% 0%;
+  height: 180px;
+  -webkit-filter: drop-shadow(0.3rem 0.3rem 0.3rem #d4d4d4);
+          filter: drop-shadow(0.3rem 0.3rem 0.3rem #d4d4d4);
+  padding-bottom: 0.3rem;
+}
+
+/*=================== Footer ===================*/
+.footer {
+  padding: 1.5rem;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  background-color: #face54;
+}
+
+.footer__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__icons li {
+  padding: 0.3rem;
+}
+
+.footer__icons li a {
+  color: #000;
+  font-size: 1.3rem;
+}
+
+.footer__icons li .fa-linkedin:hover,
+.footer__icons li .fa-envelope:hover,
+.footer__icons li .fa-github-square:hover {
+  color: #5480fa;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+/*=================== Media Queries ===================*/
+@media only screen and (min-width: 650px) {
+  .skill {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(auto, 100%))[2];
+        grid-template-columns: repeat(2, minmax(auto, 100%));
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .skill__language, .skill__plus {
+    padding-right: 1.5rem;
+  }
+  .skill__speak {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .skill__plus, .skill__speak {
+    padding-top: 1rem;
+  }
+  .card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .card #camping {
+    padding-right: 0.7rem;
+  }
+  .card #pics {
+    padding-left: 0.7rem;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .landing,
+  .section-a,
+  .skill,
+  .work {
+    padding: 2rem 8rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
