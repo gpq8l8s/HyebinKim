@@ -3,6 +3,8 @@ $color-blue: #5480fa;
 $color-yellow: #face54;
 $color-yellow-light: #fce6a7;
 $color-yellow-lighten: #fef2d3;
+$color-green: #53fb99;
+$color-red: #fb606d;
 
 /*=================== Font and typography ===================*/
 $font-body: 'Spline Sans', sans-serif;
@@ -26,6 +28,7 @@ $padding-between-small: 0.3rem;
   margin: 0;
   padding: 0;
   font-family: $font-text;
+  font-size: 1.1rem;
   list-style: none;
   text-decoration: none;
 }
@@ -100,8 +103,12 @@ img {
   .hide {
     overflow: hidden;
     span {
+      font-size: 2rem;
       display: inline-block;
       transform: translateY(100%);
+    }
+    &__icons i {
+      font-size: 1.5rem;
     }
   }
 }
@@ -111,6 +118,7 @@ img {
   padding: $padding-side;
   p {
     font-family: $font-text;
+    font-weight: 300;
     padding: $padding-title 0;
   }
   &__icons {
@@ -146,9 +154,10 @@ img {
     ul {
       align-items: center;
       padding: $padding-between 0rem;
-      font-size: 0.7rem;
+      font-weight: 300;
       li {
         text-align: center;
+        font-size: 1rem;
         img {
           width: auto;
           height: 15%;
@@ -162,6 +171,38 @@ img {
     font-family: $font-text;
     font-weight: 300;
     font-size: 1rem;
+  }
+}
+
+/*============== Underbar - skill ==============*/
+.underbar {
+  a {
+    position: relative;
+    padding: 0 10px;
+    &:after {
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 0;
+      left: 0;
+      bottom: -30px;
+      transition: 0.5s;
+    }
+    &:hover:after {
+      width: 100%;
+    }
+  }
+  .yellow a:after {
+    background-color: $color-yellow;
+  }
+  .blue a:after {
+    background-color: $color-blue;
+  }
+  .green a:after {
+    background-color: $color-green;
+  }
+  .red a:after {
+    background-color: $color-red;
   }
 }
 

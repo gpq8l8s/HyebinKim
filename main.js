@@ -4,7 +4,7 @@
 const tl = gsap.timeline({defaults: {ease: 'power1.out'}});
 
 tl.to('.text', {y: '0%', duration: 0.7, stagger: 1});
-tl.to('.intro', {y: '-100%', duration: 0.7});
+tl.to('.intro', {y: '-100%', duration: 1.2});
 tl.fromTo('nav', {opacity: 0}, {opacity: 1, duration: 0.1});
 tl.fromTo('section', {opacity: 0}, {opacity: 1, duration: 0.3});
 tl.fromTo('footer', {opacity: 0}, {opacity: 1, duration: 0.5});
