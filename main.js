@@ -3,8 +3,8 @@
 //LANDING PAGE
 const tl = gsap.timeline({defaults: {ease: 'power1.out'}});
 
-tl.to('.text', {y: '0%', duration: 0.7, stagger: 1});
-tl.to('.intro', {y: '-100%', duration: 1.2});
+tl.to('.text', {y: '0%', duration: 1.3, stagger: 1}, '-=1');
+tl.to('.intro', {y: '-100%', duration: 0.7}, '+=1');
 tl.fromTo('nav', {opacity: 0}, {opacity: 1, duration: 0.1});
 tl.fromTo('section', {opacity: 0}, {opacity: 1, duration: 0.3});
 tl.fromTo('footer', {opacity: 0}, {opacity: 1, duration: 0.5});
@@ -46,10 +46,17 @@ setInterval(blink, 500);
 
 //TOGGLE
 const toggleBtn = document.querySelector('.toggleBtn-menu');
-const jerry = document.querySelector('#jerry');
+const jerry = document.querySelector('.jerry');
 //const image = document.getElementById('#jerry');
+
+// function slideToggle() {
+//   tl.fromTo('.jerry', {x: '-100%', duration: 0.7, stagger: 1});
+// }
 
 toggleBtn.addEventListener('click', () => {
   jerry.classList.toggle('active');
+  //slideToggle();
+
+  //jerry.sidebarAction.toggle();
   //tl.to('.image', {x: '-100%', delay: 0.5});
 });

@@ -14,7 +14,7 @@ $font-icon: 1.3rem;
 $font-footer: 0.8rem;
 
 /*=================== Margin and padding ===================*/
-$padding-side: 1.5rem;
+$padding-side: 2rem;
 $padding-title: 0.5rem;
 $padding-between: 1rem;
 $padding-between-small: 0.3rem;
@@ -50,6 +50,8 @@ img {
     .nav-title {
       display: flex;
       align-items: center;
+      width: 200px;
+
       img {
         padding-right: 0.3em;
         height: 4rem;
@@ -83,8 +85,21 @@ img {
     }
   }
 }
-#jerry {
+.jerry {
   display: none;
+  margin-right: $padding-side;
+  position: relative;
+  text-align: center;
+  background-color: $color-yellow;
+  border-style: $color-yellow;
+  width: 20rem;
+  height: 15rem;
+  float: right;
+  img {
+    width: 12rem;
+    top: -20%;
+    padding: 3rem;
+  }
 }
 /*=== Landing Page ===*/
 .intro {
@@ -232,6 +247,10 @@ img {
       height: 180px;
       filter: drop-shadow(0.3rem 0.3rem 0.3rem #d4d4d4);
       padding-bottom: 0.3rem;
+      &:hover {
+        opacity: 0.6;
+        transition: all 0.5s ease 0s;
+      }
     }
   }
 }
@@ -304,5 +323,13 @@ img {
   .skill,
   .work {
     padding: 2rem 8rem;
+  }
+}
+
+@media screen {
+  .jerry.active {
+    display: block;
+    transition: all 0.5s ease 0s;
+    position: relative;
   }
 }
