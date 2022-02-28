@@ -1,36 +1,15 @@
-/*=================== Color ===================*/
-$color-blue: #5480fa;
-$color-yellow: #face54;
-$color-yellow-light: #fce6a7;
-$color-yellow-lighten: #fef2d3;
-$color-green: #53fb99;
-$color-red: #fb606d;
-
-/*=================== Font and typography ===================*/
-$font-body: 'Spline Sans', sans-serif;
-$font-text: 'Roboto Condensed', sans-serif;
-
-$font-icon: 1.3rem;
-$font-footer: 0.8rem;
-
-/*=================== Margin and padding ===================*/
-$padding-side: 2rem;
-$padding-title: 0.5rem;
-$padding-between: 1rem;
-$padding-between-small: 0.3rem;
-
-/*=================== Mixins ===================*/
-@import 'mixins';
+@import './stylesheet/mixins', './stylesheet/variable';
 
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  font-family: $font-text;
-  font-size: 1.1rem;
+  font-family: $font-general;
+  font-size: 1rem;
   list-style: none;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 img {
@@ -40,10 +19,10 @@ img {
 /*=================== Header ===================*/
 /*=================== Main ===================*/
 .landing {
-  min-height: 20vh;
+  min-height: 15vh;
   .nav {
     display: flex;
-    padding: $padding-side;
+    padding: $margin-mb-section $margin-mb-section $margin-mb-between;
     align-items: center;
     justify-content: space-between;
     min-height: 10vh;
@@ -51,7 +30,6 @@ img {
       display: flex;
       align-items: center;
       width: 200px;
-
       img {
         padding-right: 0.3em;
         height: 4rem;
@@ -87,7 +65,7 @@ img {
 }
 .jerry {
   display: none;
-  margin-right: $padding-side;
+  margin-right: $margin-mb-section/2;
   position: relative;
   text-align: center;
   background-color: $color-yellow;
@@ -114,42 +92,73 @@ img {
   left: 0;
   background: $color-blue;
   color: $color-yellow;
-  font-family: $font-text;
+  &-text {
+    margin: $margin-mb-section;
+  }
   .hide {
     overflow: hidden;
+    .bonjour {
+      font-weight: 500;
+    }
     span {
-      font-size: 2rem;
+      font-size: 2.5rem;
+      font-weight: 300;
       display: inline-block;
       transform: translateY(100%);
     }
-    &__icons i {
+    &-icons {
       font-size: 1.5rem;
+      margin-top: $margin-mb-between;
     }
   }
 }
 
 /*=================== Section A ===================*/
 .section-a {
-  padding: $padding-side;
-  p {
-    font-family: $font-text;
+  margin: $margin-mb-between/2 $margin-mb-between/2 $margin-mb-section;
+  //background: $color-yellow;
+  padding: $margin-mb-between;
+  h1 {
     font-weight: 300;
+    font-size: $font-size-title * 2;
     padding: $padding-title 0;
+    span {
+      font-weight: 500;
+      font-size: $font-size-title * 2;
+      color: $color-yellow;
+    }
   }
   &__icons {
     display: flex;
     justify-content: center;
     text-align: start;
-    padding: $padding-between 0;
+    padding: $margin-mb-between 0;
     li {
-      padding: $padding-between 0.5rem;
+      padding: $margin-mb-between 0.5rem 0;
       a {
         color: #000;
-        font-size: $font-icon;
+        font-size: $font-size-title;
+        .fa-linkedin:hover,
+        .fa-envelope:hover,
+        .fa-github-square:hover {
+          color: $color-blue;
+          transition: all 0.5s ease 0s;
+        }
       }
-      .fa-linkedin:hover,
-      .fa-envelope:hover,
-      .fa-github-square:hover {
+    }
+  }
+  .download-files {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    color: $color-light-grey;
+    .lettre {
+      padding-left: $margin-mb-between;
+    }
+    a {
+      font-size: $font-size-small;
+      color: $color-light-grey;
+      &:hover {
         color: $color-blue;
         transition: all 0.5s ease 0s;
       }
@@ -157,35 +166,182 @@ img {
   }
 }
 
-/*=================== Skills ===================*/
-.skill {
-  padding: $padding-side;
-  font-family: $font-text;
+/*=================== Works ===================*/
+.work {
+  margin: $margin-mb-between $margin-mb-between/2;
+  padding: $margin-mb-between;
+  &__title {
+    font-weight: 300;
+    font-size: $font-size-title;
+    margin-bottom: $margin-mb-between/2;
+  }
+  .card {
+    text-align: center;
+    font-size: 1rem;
+    &__content {
+      padding-bottom: 2rem;
+      a {
+        font-size: 1.3rem;
+        color: #000;
+      }
+      .fa-github-square:hover {
+        color: $color-blue;
+        transition: all 0.5s ease 0s;
+      }
+    }
+    img {
+      object-fit: cover;
+      object-position: 0% 0%;
+      height: 180px;
+      filter: drop-shadow(0.3rem 0.3rem 0.3rem #d4d4d4);
+      padding-bottom: 0.3rem;
+      &:hover {
+        opacity: 0.6;
+        transition: all 0.5s ease 0s;
+      }
+    }
+  }
+}
+
+/*=================== Section-b ===================*/
+.section-b {
+  margin: $margin-mb-between $margin-mb-between/2;
+  padding: $margin-mb-between;
+  .experience-title {
+    font-weight: 400;
+  }
+  #experience-first {
+    margin-top: $margin-mb-between;
+  }
+  h2 {
+    font-weight: 300;
+    font-size: $font-size-title;
+    margin: $margin-mb-section 0 $margin-mb-between/2 0;
+  }
+  &__card {
+    .text-lighter {
+      font-weight: 300;
+      span {
+        font-weight: 400;
+      }
+    }
+    &-container {
+      display: grid;
+      grid-template-columns: minmax(1rem, 7rem) minmax(3rem, auto);
+      grid-gap: 2rem;
+    }
+    &-name {
+      color: $color-yellow;
+    }
+    #card-last {
+      margin-top: $margin-mb-section;
+    }
+  }
+}
+
+/*=================== Section-c ===================*/
+.section-c {
+  margin: $margin-mb-between $margin-mb-between/2;
+  padding: $margin-mb-between;
+  font-weight: 300;
+  h2 {
+    font-size: $font-size-title;
+    font-weight: 300;
+    margin-bottom: $margin-mb-between/2;
+  }
+  //padding: $margin-mb-section;
   &__language,
-  &__plus,
-  &__speak {
+  &__plus {
     display: flex;
     justify-content: space-between;
-    ul {
+    div {
       align-items: center;
-      padding: $padding-between 0rem;
+      padding-bottom: $margin-mb-between;
       font-weight: 300;
-      li {
+      &:hover {
+        span {
+          display: none;
+          transition: all 0.2s ease-out;
+        }
+      }
+      p {
         text-align: center;
-        font-size: 1rem;
         img {
           width: auto;
           height: 15%;
         }
+        span {
+          color: $color-light-grey;
+          font-size: $font-size-small;
+          margin-top: $margin-mb-between;
+          height: 2rem;
+        }
       }
     }
   }
-  &__text {
-    background: $color-yellow;
-    padding: $padding-between;
-    font-family: $font-text;
+}
+
+/*=================== Section-d ===================*/
+.section-d {
+  margin: $margin-mb-between $margin-mb-between/2;
+  padding: $margin-mb-between;
+  font-weight: 300;
+  &__title {
+    font-size: $font-size-title;
     font-weight: 300;
-    font-size: 1rem;
+    margin-bottom: $margin-mb-between/2;
+  }
+  &__card {
+    display: grid;
+    grid-template-columns: minmax(1rem, 7rem) minmax(5rem, auto);
+    grid-gap: 2.5rem;
+    text-align: start;
+    margin-bottom: $margin-mb-between;
+    align-items: flex-start;
+    &-name {
+      color: $color-yellow;
+      .text-lighter {
+        font-weight: 300;
+      }
+    }
+    .diplom {
+      .text-lighter {
+        color: $color-light-grey;
+        font-size: $font-size-small;
+      }
+    }
+  }
+}
+
+/*=================== Section-e ===================*/
+.section-e {
+  margin: $margin-mb-between $margin-mb-between/2;
+  padding: $margin-mb-between;
+  font-weight: 300;
+  h2 {
+    font-weight: 300;
+    font-size: $font-size-title;
+    margin-bottom: $margin-mb-between/2;
+  }
+  &__speak {
+    display: flex;
+    justify-content: space-between;
+    div {
+      align-items: center;
+      padding-bottom: $margin-mb-between;
+      font-weight: 300;
+      p {
+        text-align: center;
+        img {
+          width: auto;
+          height: 15%;
+        }
+        span {
+          color: $color-light-grey;
+          font-size: $font-size-small;
+        }
+      }
+    }
   }
 }
 
@@ -221,47 +377,12 @@ img {
   }
 }
 
-/*=================== Works ===================*/
-.work {
-  padding: $padding-side;
-  &__title {
-    padding-bottom: $padding-title;
-  }
-  .card {
-    text-align: center;
-    font-size: 1rem;
-    &__content {
-      padding-bottom: 2rem;
-      a {
-        font-size: 1.3rem;
-        color: #000;
-      }
-      .fa-github-square:hover {
-        color: $color-blue;
-        transition: all 0.5s ease 0s;
-      }
-    }
-    img {
-      object-fit: cover;
-      object-position: 0% 0%;
-      height: 180px;
-      filter: drop-shadow(0.3rem 0.3rem 0.3rem #d4d4d4);
-      padding-bottom: 0.3rem;
-      &:hover {
-        opacity: 0.6;
-        transition: all 0.5s ease 0s;
-      }
-    }
-  }
-}
-
 /*=================== Footer ===================*/
 .footer {
-  padding: $padding-side;
+  padding: $margin-mb-section;
   text-align: center;
   align-items: center;
-  font-size: $font-footer;
-  font-family: $font-text;
+  font-size: $font-size-small;
   font-weight: 300;
   background-color: $color-yellow;
   &__icons {
@@ -270,7 +391,7 @@ img {
     li {
       a {
         color: #000;
-        font-size: $font-icon;
+        font-size: $font-size-title;
       }
       padding: 0.3rem;
       .fa-linkedin:hover,
@@ -285,45 +406,79 @@ img {
 
 /*=================== Media Queries ===================*/
 @include respond(tablet) {
-  .skill {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 100%));
-    align-items: center;
-    &__language,
-    &__plus {
-      padding-right: $padding-side;
-    }
-    &__speak {
-      justify-content: space-evenly;
-    }
-    &__plus,
-    &__speak {
-      padding-top: $padding-between;
+  .section-a {
+    margin: $margin-dsk-section * 2 $margin-dsk-section * 2 $margin-dsk-section *
+      3;
+    padding: 0;
+  }
+  .work {
+    .card {
+      justify-content: space-around;
+      display: flex;
+      //text-align: center;
+      &__content {
+        padding-right: $margin-dsk-between;
+      }
     }
   }
-  .card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    #camping {
-      padding-right: 0.7rem;
-    }
-    #pics {
-      padding-left: 0.7rem;
-    }
+  .work,
+  .section-b,
+  .section-c,
+  .section-d,
+  .section-e {
+    margin: $margin-dsk-between $margin-dsk-section * 2;
+    padding: 0;
   }
+
   .footer {
     display: flex;
     justify-content: space-between;
   }
-}
 
-@include respond(desktop) {
-  .landing,
-  .section-a,
-  .skill,
-  .work {
-    padding: 2rem 8rem;
+  .section-c,
+  .section-e,
+  .section-d {
+    width: 50vw;
   }
+  //   .skill {
+  //     display: grid;
+  //     grid-template-columns: repeat(2, minmax(auto, 100%));
+  //     align-items: center;
+  //     &__language,
+  //     &__plus {
+  //       padding-right: $margin-dsk-section;
+  //     }
+  //     &__speak {
+  //       justify-content: space-evenly;
+  //     }
+  //     &__plus,
+  //     &__speak {
+  //       padding-top: $margin-dsk-between;
+  //     }
+  //   }
+  //   .card {
+  //     display: grid;
+  //     grid-template-columns: repeat(2, 1fr);
+  //     #camping {
+  //       padding-right: 0.7rem;
+  //     }
+  //     #pics {
+  //       padding-left: 0.7rem;
+  //     }
+  //   }
+  //   .footer {
+  //     display: flex;
+  //     justify-content: space-between;
+  //   }
+  // }
+
+  // @include respond(desktop) {
+  //   .landing,
+  //   .section-a,
+  //   .skill,
+  //   .work {
+  //     padding: 2rem 8rem;
+  //   }
 }
 
 @media screen {
@@ -331,5 +486,20 @@ img {
     display: block;
     transition: all 0.5s ease 0s;
     position: relative;
+  }
+}
+
+@include respond(desktop) {
+  .section-a {
+    margin: $margin-dsk-section * 3 $margin-dsk-section * 4 $margin-dsk-section *
+      4;
+  }
+  .work,
+  .section-b,
+  .section-c,
+  .section-d,
+  .section-e {
+    margin: $margin-dsk-section $margin-dsk-section * 4;
+    padding: 0;
   }
 }

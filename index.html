@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hyebin Kim - Developpeuse front-end</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <!--=================== Icons ===================-->
+    <!--=================== Fontawesome ===================-->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -14,8 +14,7 @@
       crossorigin="anonymous"
     />
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
-    <!--=================== Font ===================-->
-    <link rel="shortcut icon" href="img/v.ico" type="image/x-icon" />
+    <!--=================== GoogleFont ===================-->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Spline+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -27,8 +26,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
     <!--=================== Favicon ===================-->
+    <link rel="shortcut icon" href="img/v.ico" type="image/x-icon" />
   </head>
   <body>
     <!--=================== HEADER ===================-->
@@ -50,9 +49,9 @@
 
     <!--============== LANDING ==============-->
     <div class="intro">
-      <div class="intro-text">
+      <article class="intro-text">
         <h1 class="hide">
-          <span class="text">Bienvenue! sur mon site web</span>
+          <span class="text bonjour">Bonjour! 👋</span>
         </h1>
         <h1 class="hide">
           <span class="text">Je suis une developpeuse front-end</span>
@@ -65,19 +64,16 @@
             <i class="fab fa-react"></i>
           </div>
         </h1>
-      </div>
+      </article>
     </div>
 
     <!--=========== SECTION A ===========-->
     <section class="section-a">
-      <h1 class="section-a__text">Bonjour,</h1>
-      <p>
-        Je suis intéressé par la conception de sites Web et l'expérience
-        utilisateur. C'est ce qui m'a motivé à apprendre le développement web,
-        et pour cela, je suis en formation. Actuellement, je suis à la recherche
-        d'un emploi ou d'un stage où je pourrai continuer ma passion après la
-        formation.
-      </p>
+      <!-- <h1 class="section-a__text">Bonjour,</h1> -->
+      <!-- <p>
+        Je recherche un emploi en tant que développeur. Je vais grandir profondément et largement en tant que développeur front-end en comblant le fossé entre ce que j'ai appris en étudiant et en travaillant sur une variété de projets. Après un intérêt constant pour le web design, ui/ux, et une familiarité avec les langages et frameworks front-end, je vais continuer à travailler en tant que développeur front-end en accumulant des connaissances du back-end pour une communication plus fluide avec des collègues d'autres domaines pour travailler ensemble sur des projets, cela posera des bases solides.
+      </p> -->
+      <h1 class="section-a__text">Je suis <span>une développeuse Web front-end</span> qui parle avec des <span>données</span> et montre avec des <span>chiffres.</span></h1>
       <ul class="section-a__icons">
         <li>
           <a
@@ -87,7 +83,7 @@
           ></a>
         </li>
         <li>
-          <a href="mailto:gpq8l8s@gmail.com" target="_blank"
+          <a href="mailto:Hyebin0KIM@gmail.com" target="_blank"
             ><i class="fas fa-envelope"></i
           ></a>
         </li>
@@ -97,112 +93,29 @@
           ></a>
         </li>
       </ul>
+      <div class="download-files">
+        <div class="download cv">
+          <a
+            href="/img/CV-Hyebin-Kim.pdf"
+            download="hyebin-kim-cv"
+            title="télécharger mon CV"
+            ><i class="fas fa-download"></i>CV</a
+          >
+        </div>
+        <div class="download lettre">
+          <a
+            href="/img/hyebin-kim-lettre-de-motivation.pdf"
+            download="hyebin-kim-lettre-de-motivation"
+            title="télécharger mon lettre de motivation"
+            ><i class="fas fa-download"></i>Lettre de motivation</a
+          >
+        </div>
+      </div>
     </section>
 
-    <!--=================== SKILLS ===================-->
-    <section class="skill">
-      <div class="skill__language">
-        <ul class="underbar">
-          <li class="underbar__skill red">
-            <a href="#"
-              ><img src="img/Html.png" alt="" class="underbar__skill-img"
-            /></a>
-          </li>
-          <li>HTML</li>
-        </ul>
-        <ul class="underbar">
-          <li class="underbar__skill blue">
-            <a href="#">
-              <img src="img/CSS.png" alt="" />
-            </a>
-          </li>
-          <li>CSS</li>
-        </ul>
-        <ul class="underbar">
-          <li class="underbar__skill yellow">
-            <a href="#"><img src="img/JavaScript.png" alt="" /></a>
-          </li>
-          <li>JavaScript</li>
-        </ul>
-        <ul class="underbar">
-          <li class="underbar__skill blue">
-            <a href="#"><img src="img/TypeScript.png" alt="" /></a>
-          </li>
-          <li>TypeScript</li>
-        </ul>
-        <ul class="underbar">
-          <li class="underbar__skill blue">
-            <a href="#"><img src="img/React.png" alt="" /></a>
-          </li>
-          <li>React.js</li>
-        </ul>
-      </div>
-      <div>
-        <p class="skill__text">
-          Construction de la base de site web-wireframe(figma). Utilisation de
-          terminal,git,github. Développement de site web en HTML Semantic,
-          CSS(flex-box, grid), SASS(scss) et sa version responsive(mobile,
-          tablet, desktop), JavaScript, React.jc
-        </p>
-      </div>
-      <div class="skill__plus">
-        <ul class="underbar">
-          <li class="underbar__skill blue">
-            <a href="#"><img src="img/Photoshop.png" alt="" /></a>
-          </li>
-          <li>Photoshop</li>
-        </ul>
-        <ul class="underbar">
-          <li class="underbar__skill red">
-            <a href="#"><img src="img/Illustrator.png" alt="" /></a>
-          </li>
-          <li>Illustrator</li>
-        </ul>
-        <ul class="underbar">
-          <li class="underbar__skill red">
-            <a href="#"><img src="img/Indesign.png" alt="" /></a>
-          </li>
-          <li>Illustrator</li>
-        </ul>
-        <ul class="underbar">
-          <li class="underbar__skill red">
-            <a href="#"><img src="img/XD.png" alt="" /></a>
-          </li>
-          <li>AdobeXD</li>
-        </ul>
-        <ul class="underbar">
-          <li class="underbar__skill green">
-            <a href="#"><img src="img/Figma.png" alt="" /></a>
-          </li>
-          <li>Figma</li>
-        </ul>
-      </div>
-      <div class="skill__speak">
-        <ul class="underbar">
-          <li class="underbar__skill red">
-            <a href="#"><img src="img/Usa.png" alt="" /></a>
-          </li>
-          <li>Anglais</li>
-        </ul>
-        <ul class="underbar">
-          <li class="underbar__skill blue">
-            <a href="#"><img src="img/Korea.png" alt="" /></a>
-          </li>
-          <li>Coréen</li>
-        </ul>
-        <ul class="underbar">
-          <li class="underbar__skill red">
-            <a href="#">
-              <img src="img/France.png" alt="" />
-            </a>
-          </li>
-          <li>Français</li>
-        </ul>
-      </div>
-    </section>
     <!--=================== WORK ===================-->
     <section class="work">
-      <h3 class="work__title">Travail</h3>
+      <h2 class="work__title">Travail</h2>
       <article class="card">
         <div class="card__content" id="camping">
           <a href="https://gpq8l8s.github.io/camping-site/" target="_blank"
@@ -219,6 +132,232 @@
           <a href="https://github.com/gpq8l8s/photograph-site" target="_blank"
             ><i class="fab fa-github-square"></i
           ></a>
+        </div>
+      </article>
+    </section>
+
+    <!--=================== SECTION-B ===================-->
+    <section class="section-b">
+      <section class="section-b__wrapper">
+        <h2 class="experience-title">Les expériences</h2>
+        <article class="section-b__card first">
+          <h2 id="experience-first">Développement web front-end</h2>
+          <div class="section-b__card-container">
+            <div class="section-b__card-name">
+              <h4>Anakao Express</h4>
+              <h4 class="text-lighter">01.2022-02.2022<br>(stage)</h4>
+            </div>
+            <ul class="text-lighter">
+              <li>Function de <span>sliders d'image</span> pour la page d'acceuil(<span>JS</span>) et développement la page de contact sur 4 de page</li>
+              <li><span>Organisation</span> des pages entières avec les membres de l'equipe et <span>structure</span> les dans un site de Miro</li>
+              <li>Collaboration avec les membres de l'équipe avec git-flow et <span>communication avec le client</span></li>
+            </ul>
+          </div>
+        </article>
+        <article class="section-b__card">
+          <h2>Développement web front-end</h2>
+          <div class="section-b__card-container">
+            <div class="section-b__card-name">
+              <h4>MusArtDons</h4>
+              <h4 class="text-lighter">12.2021-01.2022<br>(projet)</h4>
+            </div>
+            <ul class="text-lighter">
+              <li>Développement de <span>la page de contact et Footer</span> de page parmi 3 pages</li>
+              <li><span>Responsive, mobile-first</span> pour la page et Footer</li>
+              <li>Collaborer avec les membres de l'équipe avec <span>git-flow</span></li>
+              <li>Fonction de défilement(<span>JS</span>)</li>
+            </ul>
+          </div>
+        </article>
+        <!-- <article class="section-b__card graphiste">
+          <h2>Graphiste</h2>
+          <div class="section-b__card-container">
+            <div class="section-b__card-name">
+              <h4>The Dartz</h4>
+              <h4 class="text-lighter">01.2019-03.2019<br>(stage)</h4>
+            </div>
+            <ul class="text-lighter">
+              <li>Editorial design avec InDesign</li>
+              <li>Retouche de photos avec Photoshop et Illusratorations d’élements pour des produits avec Illustrator</li>
+              <li>Créations et modifications de design de livres pour enfants</li>
+              <li>Design de colis de jouets - pour Octonauts / de livres - pour l’institut national de l’ecologie, Gilbutkid, ApplebeeBook</li>
+            </ul>
+          </div>
+        </article> -->
+      </section>
+      <section class="section-b__wrapper">
+        <h2 class="experience-title">Les expériences personels</h2>
+        <article class="section-b__card">
+          <!-- <h2>Un site web de Photographe de bébé</h2> -->
+          <div class="section-b__card-container">
+            <div class="section-b__card-name">
+              <h4>Un site web de Photographe de bébé</h4>
+              <h4 class="text-lighter">12.2021-01-2022</h4>
+            </div>
+            <ul class="text-lighter">
+              <li>Un site du photographe qui j’ai travaillé sur Formation.</li>
+              <li>Page de la galerie utilisant <span>la grid sur CSS</span> et un formulaire utilisant le <form> sur HTML</li>
+              <li>Utilisation de <span>SASS(boiler-plate)</span>, Favicon</li>
+            </ul>
+          </div>
+        </article>
+        <article class="section-b__card">
+          <!-- <h2>Un site web de réservation de voyage</h2> -->
+          <div class="section-b__card-container" id="card-last">
+            <div class="section-b__card-name">
+              <h4>Un site web de réservation de voyage</h4>
+              <h4 class="text-lighter">09.2021-11.2021</h4>
+            </div>
+            <ul class="text-lighter">
+              <li>Un site de réservation de voyage d'une page contenant des informations sur les destinations de voyage, les activités et les avis des clients</li>
+              <li><span>Carrousel</span> des images(<span>JS</span>) et function de défilement par<span> -webkit</span></li>
+              <li>Actuellement, je réorganise le code en utilisant responsive et sass.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <!--=================== SECTION-C -SKILLS ===================-->
+    <section class="section-c">
+      <h2>Compétences</h2>
+      <article class="section-c__language">
+        <div class="underbar">
+          <p class="underbar__skill red">
+            <a href="#"
+              ><img src="img/Html.png" alt="" class="underbar__skill-img"
+            /></a>
+          </p>
+          <p>HTML</p>
+        </div>
+        <div class="underbar">
+          <p class="underbar__skill blue">
+            <a href="#"><img src="img/CSS.png" alt="" />
+            </a>
+          </p>
+          <p>CSS</p>
+        </div>
+        <div class="underbar">
+          <p class="underbar__skill yellow">
+            <a href="#"><img src="img/JavaScript.png" alt="" /></a>
+          </p>
+          <p>JavaScript</p>
+        </div>
+        <div class="underbar">
+          <p class="underbar__skill blue">
+            <a href="#"><img src="img/TypeScript.png" alt="" /></a>
+          </p>
+          <p>TypeScript<br><span>(apprentissage)</span></p>
+        </div>
+      </article>
+      <!-- <article>
+        <p class="skill__text">
+          Construction de la base de site web-wireframe(figma). Utilisation de
+          terminal,git,github. Développement de site web en HTML Semantic,
+          CSS(flex-box, grid), SASS(scss) et sa version responsive(mobile,
+          tablet, desktop), JavaScript, React.jc
+        </p>
+      </article> -->
+
+      <!--=================== EXTRA SKILLS ===================-->
+      <article class="section-c__plus">
+        <!--<ul class="underbar">
+          <li class="underbar__skill blue">
+            <a href="#"><img src="img/Photoshop.png" alt="" /></a>
+          </li>
+          <li>Photoshop</li>
+        </ul>
+        <ul class="underbar">
+          <li class="underbar__skill red">
+            <a href="#"><img src="img/Illustrator.png" alt="" /></a>
+          </li>
+          <li>Illustrator</li>
+        </ul>
+        <ul class="underbar">
+          <li class="underbar__skill red">
+            <a href="#"><img src="img/Indesign.png" alt="" /></a>
+          </li>
+          <li>Illustrator</li>
+        </ul>-->
+        <div class="underbar">
+          <p class="underbar__skill red">
+            <a href="#"><img src="img/AngularJS.png" alt="" /></a>
+          </p>
+          <p>Angular.js<br><span>(apprentissage)</span></p>
+        </div>
+        <div class="underbar">
+          <p class="underbar__skill red">
+            <a href="#"><img src="img/XD.png" alt="" /></a>
+          </p>
+          <p>AdobeXD</p>
+        </div>
+        <div class="underbar">
+          <p class="underbar__skill green">
+            <a href="#"><img src="img/Figma.png" alt="" /></a>
+          </p>
+          <p>Figma</p>
+        </div>
+      </article>
+    </section>
+
+    <!--=================== SECTION-D - STUDY ===================-->
+    <section class="section-d">
+      <h2 class="section-d__title">Étude / Formation </h2>
+      <article class="section-d__card">
+        <div class="section-d__card-name">
+          <h4>Openclassroom</h4>
+          <h4 class="text-lighter">02.2022-current</h4>
+        </div>
+        <div class="diplom">
+          <p>développement web</p>
+          <p class="text-lighter">Bac +2</p>
+        </div>
+      </article>
+      <article class="section-d__card">
+        <div class="section-d__card-name">
+          <h4>Simplon</h4>
+          <h4 class="text-lighter">11.2021-02.2022</h4>
+        </div>
+        <div class="diplom">
+          <p>integrateur / développement web front-end</p>
+          <p class="text-lighter">non diplom</p>
+        </div>
+      </article>
+      <article class="section-d__card">
+        <div class="section-d__card-name">
+          <h4>Université Woosong</h4>
+          <h4 class="text-lighter">03.2014-08.2018</h4>
+        </div>
+        <div class="diplom">
+          <p>Communication Design</p>
+          <p class="text-lighter">Bac +4</p>
+        </div>
+      </article>
+    </section>
+
+    <!--=================== SECTION_E - LANGUES ===================-->
+    <section class="section-e">
+      <h2>Langues</h2>
+      <article class="section-e__speak">
+        <div class="underbar">
+          <p class="underbar__skill red">
+            <a href="#"><img src="img/Usa.png" alt="" /></a>
+          </p>
+          <p>Anglais<br><span>(courant)</span></p>
+        </div>
+        <div class="underbar">
+          <p class="underbar__skill blue">
+            <a href="#"><img src="img/Korea.png" alt="" /></a>
+          </p>
+          <p>Coréen<br><span>(maternelle)</span></p>
+        </div>
+        <div class="underbar">
+          <p class="underbar__skill red">
+            <a href="#">
+              <img src="img/France.png" alt="" />
+            </a>
+          </p>
+          <p>Français<br><span>(Intermédiaire)</span></p>
         </div>
       </article>
     </section>

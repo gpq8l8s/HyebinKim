@@ -1,0 +1,26 @@
+/*=================== Color ===================*/
+$color-light-grey: #a1a1a1;
+$color-yellow: #fcd25f;
+$color-yellow-light: #fce6a7;
+$color-yellow-lighten: #fef2d3;
+$color-blue: #5480fa;
+$color-green: #53fb99;
+$color-red: #fb606d;
+
+/*=================== Font and typography ===================*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+//3,4,5,600
+$font-general: 'IBM Plex Sans', sans-serif;
+
+$font-size-title: 1.2rem;
+$font-size-normal: 1rem;
+$font-size-small: 0.8rem;
+$font-size-micro: 0.6rem;
+
+/*=================== Margin and padding ===================*/
+$margin-dsk-section: 4rem;
+$margin-dsk-between: 2rem;
+$margin-mb-section: 2rem;
+$margin-mb-between: 1rem;
+$padding-title: 0.5rem;
+$padding-between-small: 0.3rem;
