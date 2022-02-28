@@ -163,6 +163,14 @@ img {
         transition: all 0.5s ease 0s;
       }
     }
+    .cv,
+    .lettre {
+      a {
+        i {
+          padding-right: $margin-mb-between;
+        }
+      }
+    }
   }
 }
 
@@ -440,45 +448,6 @@ img {
   .section-d {
     width: 50vw;
   }
-  //   .skill {
-  //     display: grid;
-  //     grid-template-columns: repeat(2, minmax(auto, 100%));
-  //     align-items: center;
-  //     &__language,
-  //     &__plus {
-  //       padding-right: $margin-dsk-section;
-  //     }
-  //     &__speak {
-  //       justify-content: space-evenly;
-  //     }
-  //     &__plus,
-  //     &__speak {
-  //       padding-top: $margin-dsk-between;
-  //     }
-  //   }
-  //   .card {
-  //     display: grid;
-  //     grid-template-columns: repeat(2, 1fr);
-  //     #camping {
-  //       padding-right: 0.7rem;
-  //     }
-  //     #pics {
-  //       padding-left: 0.7rem;
-  //     }
-  //   }
-  //   .footer {
-  //     display: flex;
-  //     justify-content: space-between;
-  //   }
-  // }
-
-  // @include respond(desktop) {
-  //   .landing,
-  //   .section-a,
-  //   .skill,
-  //   .work {
-  //     padding: 2rem 8rem;
-  //   }
 }
 
 @media screen {
@@ -501,5 +470,17 @@ img {
   .section-e {
     margin: $margin-dsk-section $margin-dsk-section * 4;
     padding: 0;
+  }
+
+  .section-d {
+    &__card {
+      align-items: center;
+      .diplom {
+        display: flex;
+        .text-lighter {
+          padding-left: $margin-dsk-between/3;
+        }
+      }
+    }
   }
 }

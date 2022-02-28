@@ -224,6 +224,11 @@ img {
   transition: all 0.5s ease 0s;
 }
 
+.section-a .download-files .cv a i,
+.section-a .download-files .lettre a i {
+  padding-right: 1rem;
+}
+
 /*=================== Works ===================*/
 .work {
   margin: 1rem 0.5rem;
@@ -586,6 +591,19 @@ img {
   .section-e {
     margin: 4rem 16rem;
     padding: 0;
+  }
+  .section-d__card {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section-d__card .diplom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section-d__card .diplom .text-lighter {
+    padding-left: 0.66667rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
