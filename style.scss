@@ -18,67 +18,37 @@ img {
 }
 /*=================== Header ===================*/
 /*=================== Main ===================*/
-.landing {
-  min-height: 15vh;
-  .nav {
-    display: flex;
-    padding: $margin-mb-section $margin-mb-section $margin-mb-between;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 10vh;
-    .nav-title {
-      display: flex;
-      align-items: center;
-      width: 200px;
-      img {
-        padding-right: 0.3em;
-        height: 4rem;
-        width: auto;
-        object-fit: cover;
-        border-radius: 100%;
-      }
-      #dynamic {
-        display: inline-block;
-        &::after {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 0;
-          right: -10px;
-          width: 4px;
-          height: 100%;
-          background-color: #fff;
-        }
-        &.active::after {
-          display: none;
-        }
-      }
-    }
-    .toggleBtn-menu {
-      color: #000;
-    }
-    .toggleBtn-menu:hover {
-      color: $color-blue;
-      transition: all 0.5s ease 0s;
-    }
-  }
-}
-.jerry {
-  display: none;
-  margin-right: $margin-mb-section/2;
-  position: relative;
-  text-align: center;
-  background-color: $color-yellow;
-  border-style: $color-yellow;
-  width: 20rem;
-  height: 15rem;
-  float: right;
+.nav {
+  padding: $margin-mb-section $margin-mb-section $margin-mb-between;
+  display: flex;
+  align-items: center;
   img {
-    width: 12rem;
-    top: -20%;
-    padding: 3rem;
+    padding-right: 0.3em;
+    height: 4rem;
+    width: auto;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+  #dynamic {
+    display: inline-block;
+    font-size: $font-size-title;
+    width: 8rem;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: -10px;
+      width: 2px;
+      height: 100%;
+      background-color: #000;
+    }
+    &.active::after {
+      display: none;
+    }
   }
 }
+
 /*=== Landing Page ===*/
 .intro {
   display: flex;
@@ -447,14 +417,6 @@ img {
   .section-e,
   .section-d {
     width: 50vw;
-  }
-}
-
-@media screen {
-  .jerry.active {
-    display: block;
-    transition: all 0.5s ease 0s;
-    position: relative;
   }
 }
 

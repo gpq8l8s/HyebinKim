@@ -22,35 +22,17 @@ img {
 
 /*=================== Header ===================*/
 /*=================== Main ===================*/
-.landing {
-  min-height: 15vh;
-}
-
-.landing .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.nav {
   padding: 2rem 2rem 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-height: 10vh;
-}
-
-.landing .nav .nav-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 200px;
 }
 
-.landing .nav .nav-title img {
+.nav img {
   padding-right: 0.3em;
   height: 4rem;
   width: auto;
@@ -59,51 +41,25 @@ img {
   border-radius: 100%;
 }
 
-.landing .nav .nav-title #dynamic {
+.nav #dynamic {
   display: inline-block;
+  font-size: 1.2rem;
+  width: 8rem;
 }
 
-.landing .nav .nav-title #dynamic::after {
+.nav #dynamic::after {
   content: '';
   display: block;
   position: absolute;
-  top: 0;
+  top: 0px;
   right: -10px;
-  width: 4px;
+  width: 2px;
   height: 100%;
-  background-color: #fff;
+  background-color: #000;
 }
 
-.landing .nav .nav-title #dynamic.active::after {
+.nav #dynamic.active::after {
   display: none;
-}
-
-.landing .nav .toggleBtn-menu {
-  color: #000;
-}
-
-.landing .nav .toggleBtn-menu:hover {
-  color: #5480fa;
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-}
-
-.jerry {
-  display: none;
-  margin-right: 1rem;
-  position: relative;
-  text-align: center;
-  background-color: #fcd25f;
-  border-style: #fcd25f;
-  width: 20rem;
-  height: 15rem;
-  float: right;
-}
-
-.jerry img {
-  width: 12rem;
-  top: -20%;
-  padding: 3rem;
 }
 
 /*=== Landing Page ===*/
@@ -568,15 +524,6 @@ img {
   .section-e,
   .section-d {
     width: 50vw;
-  }
-}
-
-@media screen {
-  .jerry.active {
-    display: block;
-    -webkit-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
-    position: relative;
   }
 }
 
