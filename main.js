@@ -43,20 +43,3 @@ function blink() {
 }
 
 setInterval(blink, 500);
-
-//TOGGLE
-const toggleBtn = document.querySelector('.toggleBtn-menu');
-const jerry = document.querySelector('.jerry');
-//const image = document.getElementById('#jerry');
-
-// function slideToggle() {
-//   tl.fromTo('.jerry', {x: '-100%', duration: 0.7, stagger: 1});
-// }
-
-toggleBtn.addEventListener('click', () => {
-  jerry.classList.toggle('active');
-  //slideToggle();
-
-  //jerry.sidebarAction.toggle();
-  //tl.to('.image', {x: '-100%', delay: 0.5});
-});
