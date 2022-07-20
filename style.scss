@@ -159,6 +159,8 @@ img {
     font-size: 1rem;
     &__content {
       padding-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
       a {
         font-size: 1.3rem;
         color: #000;
@@ -170,8 +172,9 @@ img {
     }
     img {
       object-fit: cover;
-      object-position: 0% 0%;
+      object-position: 50% 0%;
       height: 180px;
+      width: 200px;
       filter: drop-shadow(0.3rem 0.3rem 0.3rem #d4d4d4);
       padding-bottom: 0.3rem;
       &:hover {
