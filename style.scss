@@ -86,7 +86,7 @@ img {
 
 /*=================== Section A ===================*/
 .section-a {
-  margin: $margin-mb-between/2 $margin-mb-between/2 $margin-mb-section;
+  margin: calc($margin-mb-between/2) calc($margin-mb-between/2) $margin-mb-section;
   //background: $color-yellow;
   padding: $margin-mb-between;
   h1 {
@@ -147,16 +147,17 @@ img {
 
 /*=================== Works ===================*/
 .work {
-  margin: $margin-mb-between $margin-mb-between/2;
+  margin: $margin-mb-between calc($margin-mb-between/2);
   padding: $margin-mb-between;
   &__title {
     font-weight: 300;
     font-size: $font-size-title;
-    margin-bottom: $margin-mb-between/2;
+    margin-bottom: calc($margin-mb-between/2);
   }
   .card {
     text-align: center;
     font-size: 1rem;
+    flex-wrap: wrap;
     &__content {
       padding-bottom: 2rem;
       display: flex;
@@ -174,7 +175,8 @@ img {
       object-fit: cover;
       object-position: 50% 0%;
       height: 180px;
-      width: 200px;
+      width: 100%;
+      border-radius: 5px;
       filter: drop-shadow(0.3rem 0.3rem 0.3rem #d4d4d4);
       padding-bottom: 0.3rem;
       &:hover {
@@ -187,7 +189,7 @@ img {
 
 /*=================== Section-b ===================*/
 .section-b {
-  margin: $margin-mb-between $margin-mb-between/2;
+  margin: $margin-mb-between calc($margin-mb-between/2);
   padding: $margin-mb-between;
   .experience-title {
     font-weight: 400;
@@ -198,22 +200,27 @@ img {
   h2 {
     font-weight: 300;
     font-size: $font-size-title;
-    margin: $margin-mb-section 0 $margin-mb-between/2 0;
+    margin: $margin-mb-section 0 calc($margin-mb-between/2) 0;
   }
   &__card {
     .text-lighter {
       font-weight: 300;
+      li {
+        margin-bottom: calc($margin-dsk-between/4);
+      }
       span {
         font-weight: 400;
       }
     }
-    &-container {
-      display: grid;
-      grid-template-columns: minmax(1rem, 7rem) minmax(3rem, auto);
-      grid-gap: 2rem;
-    }
+    // &-container {
+    //   display: grid;
+    //   grid-template-columns: minmax(1rem, 7rem) minmax(3rem, auto);
+    //   grid-gap: 2rem;
+    // }
     &-name {
       color: $color-yellow;
+      display: flex;
+      justify-content: space-between;
     }
     #card-last {
       margin-top: $margin-mb-section;
@@ -223,23 +230,25 @@ img {
 
 /*=================== Section-c ===================*/
 .section-c {
-  margin: $margin-mb-between $margin-mb-between/2;
+  margin: $margin-mb-between calc($margin-mb-between/2);
   padding: $margin-mb-between;
   font-weight: 300;
   h2 {
     font-size: $font-size-title;
     font-weight: 300;
-    margin-bottom: $margin-mb-between/2;
+    margin-bottom: calc($margin-mb-between/2);
   }
   //padding: $margin-mb-section;
   &__language,
   &__plus {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    flex-wrap: wrap;
     div {
       align-items: center;
       padding-bottom: $margin-mb-between;
       font-weight: 300;
+      margin: 0 $margin-mb-section * 2 $margin-mb-section 0;
       &:hover {
         span {
           display: none;
@@ -265,13 +274,13 @@ img {
 
 /*=================== Section-d ===================*/
 .section-d {
-  margin: $margin-mb-between $margin-mb-between/2;
+  margin: $margin-mb-between calc($margin-mb-between/2);
   padding: $margin-mb-between;
   font-weight: 300;
   &__title {
     font-size: $font-size-title;
     font-weight: 300;
-    margin-bottom: $margin-mb-between/2;
+    margin-bottom: calc($margin-mb-between/2);
   }
   &__card {
     display: grid;
@@ -297,13 +306,13 @@ img {
 
 /*=================== Section-e ===================*/
 .section-e {
-  margin: $margin-mb-between $margin-mb-between/2;
+  margin: $margin-mb-between calc($margin-mb-between/2);
   padding: $margin-mb-between;
   font-weight: 300;
   h2 {
     font-weight: 300;
     font-size: $font-size-title;
-    margin-bottom: $margin-mb-between/2;
+    margin-bottom: calc($margin-mb-between/2);
   }
   &__speak {
     display: flex;
@@ -397,9 +406,9 @@ img {
     .card {
       justify-content: space-around;
       display: flex;
-      //text-align: center;
+      flex-wrap: wrap;
       &__content {
-        padding-right: $margin-dsk-between;
+        padding: $margin-dsk-between;
       }
     }
   }
@@ -411,7 +420,17 @@ img {
     margin: $margin-dsk-between $margin-dsk-section * 2;
     padding: 0;
   }
+  .section-b__card {
 
+    &-container {
+      display: grid;
+      grid-template-columns: minmax(1rem, 7rem) minmax(3rem, auto);
+      grid-gap: 2rem;
+    }
+    &-name {
+      display: block;
+    }
+  }
   .footer {
     display: flex;
     justify-content: space-between;
@@ -426,8 +445,8 @@ img {
 
 @include respond(desktop) {
   .section-a {
-    margin: $margin-dsk-section * 3 $margin-dsk-section * 4 $margin-dsk-section *
-      4;
+    margin: $margin-dsk-section $margin-dsk-section * 2 $margin-dsk-section *
+      2;
   }
   .work,
   .section-b,
@@ -444,7 +463,7 @@ img {
       .diplom {
         display: flex;
         .text-lighter {
-          padding-left: $margin-dsk-between/3;
+          padding-left: calc($margin-dsk-between/3);
         }
       }
     }
